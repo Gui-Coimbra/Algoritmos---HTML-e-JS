@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globais e Locais</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <h2>Tipos de variáveis</h2>
+    <p><b>Variável Global:</b> <span id='retorno1'></span></p>
+    <p><b>Variável Local:</b> <span id='retorno2'></span></p>
+    <p><b>Chamando váriavel global dentro da função:</b> <span id='retorno3'></span></p>
+    <p><b>Chamando váriavel local fora da função:</b> <span id='retorno4'></span></p>
+
+    <button onclick="executar()">Aparecer variáveis locais</button>
+</body>
+</html>
+
+<script>
+    // Variável global: É criada fora das funções e pode ser usada em todos os lugares do código, dentro e fora de funções;
+    // Variável local: É criada dentro das funções e só pode ser usada nela, após o uso dela na função a variável morre;
+
+    var global = 'Eu sou uma variável global';
+    retorno1.innerHTML = global;
+
+    function executar(){
+        var local = 'Eu sou uma variável local';
+        retorno2.innerHTML = local;
+
+        retorno3.innerHTML = global;
+    }
+
+    retorno4.innerHTML = local;
+    // O JS retornará um erro falando que local não foi definida
+    // Ele entende que local não existe, já que ela foi declarada dentro de uma função e só pertence a ela
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis Booleanas</title>
+</head>
+<body>
+    <h2>Booleanas</h2>
+
+    <h3>Liga e desliga</h3>
+    <div id="lampadaQuadrado" style="width: 32px; height: 32px; border: 1px solid #000; background-color: #282323;">
+    </div>
+    
+    <p>
+        <button onclick="ligar()">Ligar</button>
+        <button onclick="desligar()">Desligar</button>
+    </p>
+    <p><button onclick="atualizar()">Atualizar</button></p>
+</body>
+</html>
+
+<script>
+    var lampada = false;
+
+    function ligar(){
+        lampada = true;
+    }
+
+    function desligar(){
+        lampada = false;
+    }
+
+    function atualizar(){
+        if(lampada){
+            lampadaQuadrado.style.backgroundColor = '#008000';
+        }else if(lampada == false){
+            lampadaQuadrado.style.backgroundColor = '#282323';   
+        }
+    }
+</script>

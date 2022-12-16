@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Entre com o sua <b> primeira nota: </b>
+    <input id="pri_num" type="text" placeholder="Primeira nota"> <br><br>
+    Entre com o sua <b> segunda nota: </b>
+    <input id="seg_num" type="text" placeholder="Segunda nota">
+    <br>
+    <button onclick="calcular()">calcular</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        div_msg.innerHTML = `<br>A média da sua nota é: <b> 
+            ${(Number(pri_num.value)*0.4 + Number(seg_num.value)*0.6)} </b>`;
+    }
+</script>

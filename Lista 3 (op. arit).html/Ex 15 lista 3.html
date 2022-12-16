@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15 lista 3 - Operações Aritméticas</title>
+</head>
+<body>
+    <h1>Calculadora das calorias</h1>
+
+    Informe quantos pães consumiu hoje:
+    <input id="paes" type="number" placeholder="Pães"><br><br>
+
+    Informe quantas casquinhas consumiu hoje:
+    <input id="casquinhas" type="number" placeholder="Casquinhas"><br><br>
+
+    Informe quantos minutos de caminhada fez hoje:
+    <input id="caminhada" type="number" placeholder="caminhada"><br><br>
+
+    Informe quantos minutos de musculação fez hoje:
+    <input id="musculacao" type="number" placeholder="musculação"><br><br>
+
+    <button onclick="calcular()">Calcular</button><br>
+
+    <img src="" id="img_cal">
+    
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+
+        var kal_ganha = (Number(paes.value) * 100 + Number(casquinhas.value) * 300);
+
+        var kal_perdida = (Number(caminhada.value) * 50 + Number(musculacao.value) * 30);
+
+        var kal_total = kal_ganha - kal_perdida;
+
+        img_cal.src = 'https://th.bing.com/th/id/OIP.SuqcbkPexa10AoMbxlcjVgHaHa?w=214&h=214&c=7&r=0&o=5&pid=1.7'
+        
+        div_msg.innerHTML = `<b style="color: white; background-color: red";>Entre calorias que ganhou e perdeu, 
+        seu saldo de calorias no dia é de ${kal_total}</b>`
+    }
+</script>

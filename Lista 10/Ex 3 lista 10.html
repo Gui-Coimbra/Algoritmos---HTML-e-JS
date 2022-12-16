@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3 lista 10</title>
+</head>
+<body>
+    <h1>Descubra se você pode receber o auxilio</h1>
+
+    Informe sua renda indivisual:
+    <input id="ind" type="text" placeholder="Individual"><br>
+
+    Informe o valor total da sua renda familiar:
+    <input id="fam" type="text" placeholder="Familiar"><br><br>
+
+    <button onclick="calcular()">Terei o benefício?</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var ax_individual = ind.value;
+        var ax_familiar = fam.value;
+
+        if (ax_individual == 2000 || ax_familiar == 3000) {
+            div_msg.innerHTML = `Você terá direito ao auxílio`
+        }
+     else {
+         div_msg.innerHTML = `Sem direito ao auxílio`;
+     }
+    }
+</script>

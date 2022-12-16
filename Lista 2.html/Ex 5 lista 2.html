@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe a <b>frente</b> do seu terreno:
+<input id="pri_num" type="text" placeholder="Frente do terreno"><br><br>
+    Informe a <b>lateral</b> do seu terreno:
+    <input id="seg_num" type="text" placeholder="Lateral do terreno"><br>
+
+    <button onclick="calcular()">calcular</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var x = (Number(pri_num.value) * Number(seg_num.value));
+        
+        div_msg.innerHTML = `<br>A área do seu terreno é: 
+        ${x}`;
+
+        if (x < 100){
+            alert('#terrenopequeno');
+        }
+        if (x > 100 &&x< 250){
+            alert('#terrenomedio');
+        }
+        if (x > 250){
+            alert('#terrenogrande');
+        }
+    }
+</script>

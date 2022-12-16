@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 14 - while</title>
+</head>
+<body>
+    Informe a tabela que deseja ver na tela:
+    <select id="tabuada">
+        <option value="0">Escolha uma das opções</option>
+        <option value="1">Tabuada do 1</option>
+        <option value="2">Tabuada do 2</option>
+        <option value="3">Tabuada do 3</option>
+        <option value="4">Tabuada do 4</option>
+        <option value="5">Tabuada do 5</option>
+        <option value="6">Tabuada do 6</option>
+        <option value="7">Tabuada do 7</option>
+        <option value="8">Tabuada do 8</option>
+        <option value="9">Tabuada do 9</option>
+    </select><br><br>
+
+    Informe até que número deseja que a tabuada seja construìda:
+    <input id="numero" type="number" placeholder="numero"><br><br>
+
+    <button onclick="ver()">Ver tabuada</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function ver() {
+        index = 1;
+        var tab = Number(tabuada.value);
+        var num = Number(numero.value);
+
+        span_msg.innerHTML = ``;
+
+        while (index <= num) {
+            if (index%2 == 0) {
+                span_msg.innerHTML += `<span style="color: blue"> ${tab} x ${index} = ${tab*index}</span><br>`;
+
+            } else {
+            span_msg.innerHTML += `<span style="color: red"> ${tab} x ${index} = ${tab*index}</span><br>`;
+            }
+            
+            index++;
+        }
+    }
+</script>

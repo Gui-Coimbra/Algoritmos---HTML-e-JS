@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7 lista 3</title>
+</head>
+<body>
+    Informe o nome da sua rua/avenida/vila:
+    <input id="nome" type="text" placeholder="logradouro"><br>
+
+    Informe o número da sua residência:
+    <input id="num" type="text" placeholder="número"><br><br>
+
+    <button onclick="onde()">Onde eu moro</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function onde() {
+        var ax_nome = nome.value;
+        var ax_num = num.value;
+        div_msg.innerHTML = `Seu logradouro é ${ax_nome} <br>
+        O número do seu logradouro é ${ax_num}`;
+    }
+</script>

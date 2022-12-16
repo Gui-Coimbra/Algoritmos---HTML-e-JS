@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de repetição While</title>
+</head>
+<body>
+    <h2>While</h2>
+
+    <h3>Contador</h3>
+
+    <p>Número Inicial: <input id="n1"></p>
+    <p>Número Final: <input id="n2"></p>
+
+    <p><button onclick="contar()">Contar</button></p>
+
+    <br><br>
+    
+    <span id="retorno"></span>
+</body>
+</html>
+
+<script>
+    function contar(){
+        var inicio = Number(n1.value);
+        var final = Number(n2.value);
+
+        // Enquanto a condição for verdadeira, ele repetirá os comandos dentro da chave
+        while(inicio <= final){
+            retorno.innerHTML += `${inicio} <br>`;
+            inicio += 1;
+            // Importante aumentar o valor para que ele não entre no looping infinito
+        }
+        // Quando for falsa, ele sairá do looping
+    }
+</script>

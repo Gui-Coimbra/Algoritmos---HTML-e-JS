@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8 - for</title>
+</head>
+<body>
+    Informe o limite inferior e superior da amostragem:<br>
+    <input id="inferior" type="number" placeholder="Inferior">
+    <input id="superior" type="number" placeholder="Superior"><br><br>
+
+    <button onclick="contar()">Contar</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function contar() {
+        span_msg.innerHTML = ``;
+
+        if (Number(inferior.value) <= 1 || Number(superior.value) >= 100) {
+            span_msg.innerHTML += `Erro: os valores devem estar entre 1 e 100!`;
+
+        }
+        for (var index = Number(inferior.value); index <= Number(superior.value); index++) {
+                span_msg.innerHTML += `${index}<br>`;
+            }
+    }
+</script>

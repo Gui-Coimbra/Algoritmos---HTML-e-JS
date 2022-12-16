@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1 lista 3</title>
+</head>
+<body>
+    Informe sua cidade natal:
+    <input id="cidade" type="text" placeholder="cidade natal"><br>
+    Informe seu ano da nascimento:
+    <input id="ano" type="text" placeholder="Ano"><br><br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function cadastrar() {
+        var ax_cidade = cidade.value;
+        var ax_ano = ano.value;
+        div_msg.innerHTML = `Você nasceu na cidade de <b>${ax_cidade}</b> em <u>${ax_ano}</u>`;
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 7 lista 9</title>
+</head>
+<body>
+    <h2>Verificação final de alunos</h2>
+    Entre com sua nota:
+    <input id="ipt_nota"><br>
+    Entre com sua frequência:
+    <input id="ipt_frequência"><br>
+    <button onclick="verificar()">Verificar</button>
+</body>
+</html>
+<script>
+    function verificar() {
+        var ax_nota = ipt_nota.value;
+        var ax_freq = ipt_frequência.value;
+        if(ax_nota.value >= 6 && ax_freq.value >= 75){
+            alert('Parabéns! Aprovado!')
+        } else {
+            alert('Infelizmente não foi dessa vez')
+        } 
+    } 
+</script>

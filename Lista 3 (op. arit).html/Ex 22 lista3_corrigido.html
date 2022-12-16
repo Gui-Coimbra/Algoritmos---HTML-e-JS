@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 22 lista 3</title>
+</head>
+
+<body>
+    <span style="color: green;">Votos na <u>Praça é Nossa</u>: </span> <b id="a_vezes">0</b> <br>
+    <span style="color: green;">Votos no <u>Zorra Total</u>: </span> <b id="b_vezes">0</b> <br>
+    <span style="color: green;">Total de <u>Votos</u>: </span> <b id="c_vezes">0</b> <br><br>
+
+    <button onclick="praca()">Votar na Praça é nossa</button>
+    <button onclick="zorra()">Votar na Zorra total</button>
+</body>
+
+</html>
+<script>
+    var ax_praca = 0;
+    var ax_zorra = 0;
+
+    // Criar uma variável global que terá as somas dos votos, independente se for zorra ou praça
+    var ax_total_votos = 0;
+
+    function praca() {
+        // voce poderia usar apenas ax_praca++, no lugar de  ax_praca = ax_praca + 1; 
+        ax_praca = ax_praca + 1;
+        ax_total_votos = ax_total_votos + 1;
+        a_vezes.innerHTML = `${ax_praca}`;
+        //chamar o innerHTML com o total de votas e deve ser entre `${variavel}`
+        c_vezes.innerHTML = `${ax_total_votos}`;
+    }
+
+    function zorra() {
+        // aqui eu o ax_zorra++ é igual ao caso anterior que poderia usar ax_zorra = ax_zorra + 1
+        ax_zorra++;
+        ax_total_votos = ax_total_votos + 1;
+        b_vezes.innerHTML = `${ax_zorra}`;
+        //chamar o innerHTML com o total de votas e deve ser entre `${variavel}`
+        c_vezes.innerHTML = `${ax_total_votos}`;
+    }
+
+</script>

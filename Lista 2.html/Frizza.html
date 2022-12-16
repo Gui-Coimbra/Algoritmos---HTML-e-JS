@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe a temperatura atual:
+    <input type="text" placeholder="temperatura" id="temperatura">
+    <br>
+
+    <Button onclick="ver()">Ver a situação</Button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function ver() {
+        var temperatura = temperatura.value;
+        if (temperatura >= 21 && temperatura <= 24) {
+            alert('Temperatura confortável')
+        }
+    } 
+</script>

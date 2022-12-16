@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe sua idade:
+    <input id="idade"><br>
+    Informe seu salário:
+    <input id="salario"><br><br>
+    <button onclick="analisar()">Analisar Situação</button><br>
+    <span id="mensagem"></span>
+</body>
+</html>
+<script>
+    function analisar() {
+        var ax_idade = idade.value;
+        var ax_salario = salario.value;
+        if (ax_idade < 18 && ax_salario > 2500) {
+            mensagem.innerHTML = "Menor de idade ostentação";
+        } else if (ax_idade < 18 && ax_salario <= 2500) {
+            mensagem.innerHTML="Menor de idade e liso"; 
+        } else if (ax_salario < 3500) {
+            mensagem.innerHTML="Maior de idade e liso";
+        } else if (ax_salario >= 3500 && ax_salario <= 7000) {
+            mensagem.innerHTML="Maior de idade ortentação";
+        } else {
+            mensagem.innerHTML="Maior de idade e mega ostentação";
+        }
+    }
+</script>

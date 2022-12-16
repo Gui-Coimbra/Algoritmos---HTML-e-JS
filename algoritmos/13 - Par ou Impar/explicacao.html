@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de repetição While</title>
+</head>
+<body>
+    <h2>While</h2>
+
+    <h3>Verificador de Par ou Ímpar</h3>
+
+    <p>Número Inicial: <input id="n1"></p>
+    <p>Número Final: <input id="n2"></p>
+
+    <p><button onclick="executar()">Ver par ou ímpar</button></p>
+
+    <br><br>
+    
+    <span id="retorno"></span>
+</body>
+</html>
+
+<script>
+    // O operador % traz o resto da divisão
+    // Logo 17 % 5 traz o resto de 17 divido por 5
+    alert(17%5); 
+
+    // Então os números que não sobrem nada quando dividos por 2, são pares.
+    alert(30%2);
+     
+    function executar(){
+        var inicio = Number(n1.value);
+        var final = Number(n2.value);
+
+        while(inicio <= final){
+            if(inicio % 2 == 0){
+                retorno.innerHTML += `${inicio} <br>`;
+            }
+            inicio += 1;
+        }
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 9 lista 3</title>
+</head>
+<body>
+    <img id="img_nomoney" src="https://th.bing.com/th/id/OIP.-HkY9N7vBYukfdV93tefiQAAAA?w=115&h=180&c=7&r=0&o=5&pid=1.7">
+
+    <br>
+    <input id="seis" type="number" placeholder="Seis meses"><br>
+    <input id="tres" type="number" placeholder="Tres anos">
+
+    <button onclick="calcular()">Como estarei no futuro?</button>
+
+    <div id="div_msg"></div>
+    <img id="img_money" src="">
+    <img id="img_money2" src=""><br>
+</body>
+</html>
+<script>
+    function calcular() {
+        var ax_meses = seis.value;
+        var ax_anos = tres.value;
+
+        div_msg.innerHTML = `${ax_meses} em 6 meses e ${ax_anos} em 3 anos`;
+        img_money.src = 'https://th.bing.com/th/id/OIP.49ImIidr-DwlFnz4fx0mZQHaKD?w=125&h=180&c=7&r=0&o=5&pid=1.7';
+        img_money2.src = 'https://th.bing.com/th/id/OIP.UFVsEG_T8PlI0Cu5TxxBagAAAA?w=200&h=180&c=7&r=0&o=5&pid=1.7';
+        
+    }
+</script>

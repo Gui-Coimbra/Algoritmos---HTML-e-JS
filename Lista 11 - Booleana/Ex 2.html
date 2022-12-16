@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2 - booleanas</title>
+</head>
+<body>
+    Informe a sua altura:
+    <input id="altura" type="number" autofocus><br><br>
+
+    <button onclick="analisar()">Analisar para esportes</button><br><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function analisar() {
+        span_msg.innerHTML = ``;
+        var corrida = altura.value < 1.60;
+        var velejador = altura.value > 1.60 && altura.value < 1.70; 
+        var jogador = altura.value > 1.70 && altura.value < 1.85;
+
+        if (corrida) {
+            span_msg.innerHTML = `Pode tentar ser piloto(a) de corrida<br>`;            
+        }
+        if (velejador) {
+            span_msg.innerHTML = `Pode tentar ser velejador(a)`;
+        }
+        if (jogador) {
+            span_msg.innerHTML = `Pode tentar ser jogador de futebol ou handbol`;
+        }
+    }
+</script>

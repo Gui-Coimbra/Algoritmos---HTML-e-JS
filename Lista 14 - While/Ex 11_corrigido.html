@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex11 - while</title>
+</head>
+<body>
+    Informe um intervalo de valores numéricos crescentes:<br>
+    <input id="pri_num" type="number" placeholder="min">
+    <input id="seg_num" type="number" placeholder="max"><br><br>
+
+    <button onclick="viva()">Viva o 7</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function viva() { 
+        var limite_min = pri_num.value;
+        var limite_max = seg_num.value;
+
+        while (limite_min <= limite_max) {
+            if (limite_min%7 == 0) {
+                span_msg.innerHTML += `${limite_min}<br>`;
+            }
+            limite_min++;
+        }
+    }
+</script>

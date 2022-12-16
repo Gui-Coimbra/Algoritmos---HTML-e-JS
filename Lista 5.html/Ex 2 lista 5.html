@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2 lista 5</title>
+</head>
+<body>
+    <select id="atividade">
+        <option value="0">Escolha uma das opções</option>
+        <option value="1">Cinema</option>
+        <option value="2">Teatro</option>
+        <option value="3">Parque</option>
+        <option value="4">Show</option>
+    </select>
+
+    <button onclick="atração()">Ver atração</button>
+</body>
+</html>
+<script>
+    function atração() {
+        var ax_atracao = atividade.value;
+
+        if (ax_atracao == 1) {
+            alert('Assistir a filme "Marley & Eu"');
+        }
+
+        if (ax_atracao == 2) {
+            alert('Assistir a peça "O Fantasma da Ópera"');
+        }
+
+        if (ax_atracao == 3) {
+            alert('Assistir a peça "O Fantasma da Ópera"');
+        }
+
+        if (ax_atracao == 4) {
+            alert('Ouvir o show da "Lady Gaga"');
+        }
+     }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 23 - For</title>
+</head>
+<body>
+    <h1>Atazanando a medium</h1>
+
+    Informe a quantidade elefantes:
+    <input id="elefantes" type="number" autofocus><br><br>
+
+    <button onclick="atazanar()">Atazanar a médium</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function atazanar() {
+        
+        var nome = "";
+            nome += ", incomodam";
+
+        span_msg.innerHTML = ``;
+
+        for (i = 1; i <= Number(elefantes.value); i++) {
+            if (i == 1) {
+                span_msg.innerHTML += `1 elefante incomoda muita gente!<br>`;
+
+            } else {
+            span_msg.innerHTML += `${i} elefantes ${nome} muito mais!<br>`;
+            }
+
+            
+            }
+        }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Matemáticos</title>
+</head>
+<body>
+    <h2>Operadores += -=  *=  /= **=</h2>
+
+    <p>Número I:  <input type="text" id="n1Inpt"></p>
+    <p>Número II: <input type="text" id="n2Inpt"></p>
+    <button onclick="mostrar()">Mostrar Resultado</button>
+
+    <br><br>
+
+    <span id="retorno"></span>
+</body>
+</html>
+
+<script>
+    function mostrar(){
+        var n1 = Number(n1Inpt.value);
+        var n2 = Number(n2Inpt.value);
+
+        // Leia-se n1 = n1 + n2
+        n1 += n2;
+        // Ele soma o próprio valor + a variável do próximo
+
+        // Exemplos para teste
+        // n1 -= n2;
+        // n1 *= n2;
+        // n1 /= n2;
+        // n1 **= n2;
+        
+        retorno.innerHTML += `${n1} <br>`;
+    }
+</script>

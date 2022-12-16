@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 lista 3 - Operações Aritméticas</title>
+</head>
+<body>
+    Informe sua nota na avaliação continuada:
+    <input id="continuada" type="number" placeholder="continuada"><br><br>
+
+    Informe sua nota na avaliação semestral:
+    <input id="semestral" type="number" placeholder="semestral"><br><br>
+
+    Informe seu nome:
+    <input id="nome" type="text" placeholder="nome"><br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var ax_cont = (continuada.value * 0.4);
+        var ax_seme = (semestral.value * 0.6);
+        var ax_media = ax_cont + ax_seme;
+        div_msg.innerHTML = `A média de ${nome.value} será de ${ax_media}`
+    }
+</script>

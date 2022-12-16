@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 22</title>
+</head>
+<body>
+    Informe o limite inferior, o limite superior da amostragem<br>
+    e um número para testar a divisibilidade:<br>
+    <input id="inferior" type="number" placeholder="Inferior" autofocus>
+    <input id="superior" type="number" placeholder="Superior">
+    <input id="divisibilidade" type="number" placeholder="Divisibilidade"><br><br>
+
+    <button onclick="contar()">Contar</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function contar() {
+        span_msg.innerHTML = ``;
+
+        var inf = Number(inferior.value);
+        var sup = Number(superior.value);
+        var div = Number(divisibilidade.value);
+        var index = 0;
+        var divisiveis = 0;
+        var soma = 0;
+        var maior = 0;
+        var menor = 0;
+
+        if (inf <= 1) {
+            span_msg.innerHTML += `Erro: o limite inferior deve ser maior que 1!<br>`;
+    }   
+        if (sup <= inf || sup >= 100) {
+            span_msg.innerHTML += `Erro: o limite superior deve ser menor que 100 e maior que o limite inferior!<br>`;
+    }
+        if (div < 3 || div > 10) {
+            span_msg.innerHTML += `Erro: o divisor deve estar entre 3 e 10!<br>`;
+
+    } else if (inf > 1 && (sup < 100 && sup > inf) && (div >= 3 && div <= 10)) {
+       
+        for (index = inf; index <= sup; index++) {
+            
+            if (index%div == 0) { 
+                span_msg.innerHTML += `${index}<br>`;
+                divisiveis++;
+                soma+=index;
+                maior=index;
+            }
+        }
+        span_msg.innerHTML += `<br>Total de números exibidos: ${divisiveis}<br>`;
+        span_msg.innerHTML += `Somatório dos números exibidos: ${soma}<br>`;
+        span_msg.innerHTML += `Média dos números exibidos: ${soma/divisiveis}<br>`;
+        span_msg.innerHTML += `Maior número exibido: ${maior}<br>`;
+        span_msg.innerHTML += `Menor número exibido: <br>`;
+    }
+}
+</script>

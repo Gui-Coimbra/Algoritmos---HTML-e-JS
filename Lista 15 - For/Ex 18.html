@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 18 - For</title>
+</head>
+<body>
+    Informe quantas voltas seu carro dará em uma corrida:
+    <input id="voltas" type="number"><br><br>
+
+    <button onclick="iniciar()">Iniciar corrida</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function iniciar() {
+        span_msg.innerHTML = ``;
+        for (var i = 1; i <= Number(voltas.value); i++) {
+            span_msg.innerHTML += `Carro dando a ${i}° volta!<br>`;
+        }
+        span_msg.innerHTML += `Corrida finalizada!`;
+    }
+</script>

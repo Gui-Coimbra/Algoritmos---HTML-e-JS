@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 5 lista 10</title>
+</head>
+<body>
+    Informe a temperatura atual:
+    <input id="temp" type="text" placeholder="temperatura">
+
+    <button onclick="analisar()">Analisar</button>
+</body>
+</html>
+<script>
+    function analisar() {
+
+        var ax_temp = temp.value;
+        
+        if (ax_temp < 21 || ax_temp > 24){
+            alert('Alerta de desconforto!')}
+
+        if (ax_temp < 21) {
+            alert('As pessoas vão ter hipotermia');}
+            
+            else if (ax_temp > 24) {
+            alert('As pessoas vão derreter');}
+    }
+
+</script>

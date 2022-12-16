@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consistência</title>
+</head>
+
+<body>
+    <h2>Escolha o seu time</h2>
+    
+    <select id="timeSlct" onchange="executar()">
+        <option value="0">Selecione o seu time</option>
+        <option value="1">Corinthians</option>
+        <option value="2">Palmeiras</option>
+        <option value="3">Santos</option>
+        <option value="4">São Paulo</option>
+    </select>
+
+</body>
+
+</html>
+
+<script>
+    function executar(){
+        // Consistência é um termo usado quando a condicional pode ter mais de dois resultados
+        // Exemplo - Modelo Cascata
+
+        time = Number(timeSlct.value);
+
+        if(time == 0){
+            alert('Selecione outro!');
+        }else{
+            if(time == 1){
+                alert('Campeão mundial de 2012!');
+            }else{
+                if(time == 2){
+                    alert('Maior campeão nacional!');
+                }else{
+                    if(time == 3){
+                            alert('O mais conhecido fora do Brasil!');
+                    }else{
+                        if(time == 4){
+                            alert('Maior campeão internacional!');
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>

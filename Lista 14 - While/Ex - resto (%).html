@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe um número:
+    <input id="ipt_num" type="number"><br><br>
+
+    <button onclick="dividir()">É divisivel por 7?</button>
+</body>
+</html>
+<script>
+    function dividir() {
+        var ax_num = ipt_num.value;
+
+        if (ax_num % 7 == 0) {
+            alert('Sim, é');
+
+        } else {
+            alert('Não, não é');
+        }
+    }
+</script>

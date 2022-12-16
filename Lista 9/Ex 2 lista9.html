@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe sua renda individual:
+    <input id="ind" type="text" placeholder="Individual">
+    Informe a renda total da sua familia:
+    <input id="fam" type="text" placeholder="Familiar">
+    <br>
+
+    <Button onclick="Verificar()">Verificar ajuda</Button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+   function Verificar(){
+       var renda = (Number(ind.value) + Number(fam.value));
+       if (renda  ){
+       alert("Você terá direito!")
+     }
+   }
+</script>

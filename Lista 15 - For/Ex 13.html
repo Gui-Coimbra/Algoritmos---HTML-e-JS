@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 13 - For</title>
+</head>
+<body>
+    Informe quantas xícaras de café com leite você acreditar ter tomado na vida:<br>    
+    <input id="cafe" type="number" placeholder="cafézin"><br><br>
+
+    <button onclick="ver()">Ver quantidade</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function ver() {
+        span_msg.innerHTML = ``;
+
+        var index = 0;
+        var coffee = Number(cafe.value);
+
+        for (index = 1; index <= coffee; index++) {
+            span_msg.innerHTML += `${index} colheres de leite em pó
+            e ${index * 2} colheres de café em pó<br>`;
+        }
+    }
+</script>

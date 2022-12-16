@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - Numeros primos</title>
+</head>
+<body>
+    <h1>Sr. Benedito e os Números primos</h1>
+
+    Informe o intervalo de números que deseja analisar:<br>
+    <input id="min" type="number" placeholder="Número mínimo">
+    <input id="max" type="number" placeholder="Número máximo"><br><br>
+
+    <button onclick="analisar()">Analisar</button><br>
+
+    <Span id="span_msg"></Span>
+</body>
+</html>
+<script>
+    function analisar() {
+        span_msg.innerHTML = ``;
+
+        var minimo = Number(min.value);
+        var maximo = Number(max.value);
+        var div = -1;
+
+        if (minimo <= 0 || maximo <= minimo) {
+            span_msg.innerHTML = `Erro: o 1° número deve ser maior que 0 e o 2° número maior que o primeiro.`;
+        } else {
+
+        while (minimo > 0 && minimo <= maximo) {
+
+            if (minimo%2 == 0 || minimo%3 == 0 || minimo%5 == 0 || minimo%7 == 0 || minimo%11 == 0 || minimo%13 == 0) {
+                div++;
+            }
+
+         if (minimo%2 == 0 && minimo%3 == 0 && minimo %5 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é par. `;
+            span_msg.innerHTML += `O número ${minimo} é divisível por 3. `;
+            span_msg.innerHTML += `O número ${minimo} é divisível por 5. <br>`;
+
+        } else if (minimo%2 == 0 && minimo%3 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é par. `;
+            span_msg.innerHTML += `O número ${minimo} é divisível por 3. <br>`;
+            
+        } else if (minimo%2 == 0 && minimo%5 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é par. `;
+            span_msg.innerHTML += `O número ${minimo} é divisível por 5. <br>`;
+            
+        } else if (minimo%3 == 0 && minimo%5 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é divisível por 3. `;
+            span_msg.innerHTML += `O número ${minimo} é divisível por 5. <br>`;   
+
+        } else if (minimo%2 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é par<br>`;    
+
+        } else if (minimo%3 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é divisível por 3<br>`;
+
+        } else if (minimo%5 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é divisível por 5<br>`;
+
+        } else if (minimo%7 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é divisível por 7<br>`;
+
+        } else if (minimo%11 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é divisível por 11<br>`;
+
+        } else if (minimo%13 == 0) {
+            span_msg.innerHTML += `O número ${minimo} é divisível por 13<br>`;
+
+        } else {
+            span_msg.innerHTML += `O número ${minimo} não é divisível pelos principais números primos<br>`;
+        }
+        minimo++;
+    }       
+        var minimo = min.value;
+        var maximo = max.value;
+        var num = maximo-minimo;
+
+            span_msg.innerHTML += `<br>O intervalo de ${minimo} a ${maximo} tem ${num} números, 
+            sendo que ${div} números são divisíveis por algum número primo.`; 
+    }
+}
+</script>

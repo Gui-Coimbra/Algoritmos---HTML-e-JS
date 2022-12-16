@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8 lista 7</title>
+</head>
+<body>
+    Informe a <b>quantidade de homens:</b>
+    <input id="qtd_homens" type="text" placeholder="Quantidade de homens">
+    <br><br>
+
+    Informe a <b> quantidade de mulheres:</b>
+    <input id="qtd_mulheres" type="text" placeholder="Quantidade de mulheres">
+
+    <br><br>
+
+    <button onclick="calcular()">Ligar elevador</button>
+
+    <br>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var pesototal = (Number(qtd_homens.value) * 90 + Number(qtd_mulheres.value) * 70);
+        if (pesototal < 500) {
+        div_msg.innerHTML = `Elevador vai se mover, pois está com ${pesototal} kg`
+    } else 
+    div_msg.innerHTML = `Alguém precisa descer. Precisa perder ${pesototal - 500} kg para mover o elevador`
+}
+</script>

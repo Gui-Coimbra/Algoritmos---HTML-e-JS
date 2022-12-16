@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1 lista 3 - Operações Aritméticas</title>
+</head>
+<body>
+    <h1>Quanto tempo falta para minha aposentadoria?</h1>
+
+    Informe sua idade:
+    <input id="idade" type="number" placeholder="Idade"><br><br>
+
+    <button onclick="homem()">Sou homem</button><br>
+    <button onclick="mulher()">Sou mulher</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function homem() {
+        var idade_homem = idade.value;
+        var ap_homem = 70;
+        var res_anos = (ap_homem - idade_homem);
+        div_msg.innerHTML = `<b style="color: green;"> Se for homem, faltam <u>${res_anos} anos</u> p/ aposentar <b/>`
+    }
+
+    function mulher() {
+        var idade_mulher = idade.value;
+        var ap_mulher = 60;
+        var res_anos = (ap_mulher - idade_mulher);
+        div_msg.innerHTML = `<b style="color:purple;"> Se for mulher faltam <u>${res_anos} anos</u> p/ aposentar</b>`
+    }
+</script>

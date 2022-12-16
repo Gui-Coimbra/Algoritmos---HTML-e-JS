@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3 - booleanas</title>
+</head>
+<body>
+    Informe a nota e a frequência do aluno:<br>
+    <input id="nota" type="number" placeholder="Nota" autofocus>
+    <input id="freq" type="number" placeholder="frequencia"><br><br>
+
+    <button onclick="analisar()">Analisar</button><br><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function analisar() {
+        span_msg.innerHTML = ``;
+
+        var notaVar = nota.value >= 6;
+        var freqVar = freq.value >= 75;
+
+        if (notaVar && freqVar) {
+            span_msg.innerHTML += `Parabéns, aprovado(a)!`;
+        }
+        if (notaVar == false) {
+            span_msg.innerHTML += `Reprovado(a) por nota!<br>`; 
+        }
+        if (freqVar == false) {
+            span_msg.innerHTML += `Reprovado(a) por frequência!`;
+        }       
+    }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8 lista 5</title>
+</head>
+<body>
+    O que você quer praticar hoje?
+    <select id="pratica" onchange="atividade()">
+        <option value="0">Escolha uma das opções</option>
+        <option value="1">Dançar</option>
+        <option value="2">Jogar video game</option>
+        <option value="3">Assistir seriados</option>
+        <option value="4">Ouvir rock</option>
+    </select><br>
+
+    <img id="img_atividade" src="">
+</body>
+</html>
+<script>
+    function atividade() {
+        var ax_atividade = pratica.value;
+        
+        if (ax_atividade == 1) {
+            img_atividade.src = 'https://cdn.shopify.com/s/files/1/1061/1924/files/Dancer_With_Red_Dress_Emoji_400x400.png';
+        }
+
+        if (ax_atividade == 2) {
+            img_atividade.src = 'https://cdn.shopify.com/s/files/1/1061/1924/files/Virus_Emoji_400x400.png';
+        }
+
+        if (ax_atividade == 3) {
+            img_atividade.src = 'https://cdn.shopify.com/s/files/1/1061/1924/files/Man_Bowing_Emoji_400x400.png';
+        }
+
+        if (ax_atividade == 4) {
+            img_atividade.src = 'https://cdn.shopify.com/s/files/1/1061/1924/files/Sign_of_the_Horns_Emoji_400x400.png';
+        }
+    }
+</script>

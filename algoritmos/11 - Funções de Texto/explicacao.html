@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de Texto</title>
+</head>
+<body>
+    <h2>Funções de texto</h2>
+
+    <p>Escreva uma frase: <input id="fraseInpt"></p>
+    <p><button onclick="ver()">Ver</button></p>
+
+    <span id="retorno"></span>
+</body>
+</html>
+<script>
+    // Importante citar que todas as funções possuem parenteses ()
+    function ver() {
+        var frase = fraseInpt.value;
+        var qtd = 0;
+
+        retorno.innerHTML = frase.length + " -> é o tamanho <br> .length mostra a quantidade de carcteres que uma variável possui <br>";
+
+        // É possível usar o length para atribuir o valor de outra variável
+        // O .length sempre retorna um número
+        qtd = frase.length;
+
+        alert(`Sua frase tem ${qtd} caracteres`)
+
+        // Eu posso utilizar o .length para fazer operações lógicas 
+        if (frase.length < 8){
+            alert('Preguiçoso');
+        }
+
+        // O startsWith('valor') verifica se a variável começa com o valor passado como parâmetro
+        if (frase.startsWith('www.')){
+            alert('Sim, o início é uma URL');
+        }else {
+            alert('Não, o início não é uma URL');
+        }
+
+        // O endsWith('valor') verifica se a variável termina com o valor passado como parâmetro
+        if (frase.endsWith('.com' ) || frase.endsWith('.school') || frase.endsWith('.br')){
+            alert('Sim, o fim é como uma URL');
+        }else {
+            alert('Não, o fim não é como uma URL');
+        }
+
+        // O toUpperCase() transforma o valor da variável em tudo maiúsculo.
+        alert(frase.toUpperCase());
+
+        // O toLowerCase() transforma o valor da variável em tudo minusculo.
+        alert(frase.toLowerCase());
+
+        // O .indexOf() retorna o número referente a posição inicial do primeiro conjunto de caracteres encontrado a partir do 0.
+        alert(frase.indexOf('sp')); 
+
+        // Senão encontrou o conjunto de caracteres ele retorna -1.
+
+    }
+</script>

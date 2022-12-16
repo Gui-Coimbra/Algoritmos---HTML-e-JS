@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 15 - while</title>
+</head>
+
+<body>
+    Informe de quantos em quantos dias você faz musculação:
+    <input id="musculo" type="number" autofocus><br><br>
+
+    <button onclick="exibir()">Exibir rotina mensal</button><br>
+
+    <span id="span_msg"></span>
+</body>
+
+</html>
+<script>
+    function exibir() {
+        var dias = Number(musculo.value);
+        var index = 1;
+
+        while (index <= 30) {
+            if (index%dias != 0) {
+                span_msg.innerHTML += `Dia ${index} - Comer, dormir etc<br>`;
+                
+            } else {
+                span_msg.innerHTML += `Dia ${index} - Musculação<br>`;
+            }
+
+            index++;
+        }
+    }
+</script>

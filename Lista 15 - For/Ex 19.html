@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 19 - For</title>
+</head>
+<body>
+    Informe a sua idade:
+    <input onchange="ver()" id="idade" type="number" autofocus><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function ver() {
+        span_msg.innerHTML = ``;
+        
+        for (var i = 0; i <= Number(idade.value); i++) {
+            if (i >= 0 && i <= 4) {
+                span_msg.innerHTML += `${i} anos (Primeira Infância)<br>`;
+            }
+            else if (i <= 6) {
+                span_msg.innerHTML += `${i} anos (Pré-escolar)<br>`;
+            }
+            else if (i <= 10) {
+                span_msg.innerHTML += `${i} anos (Segunda Infância)<br>`;
+            }
+            else if(i < 18) {
+                span_msg.innerHTML += `${i} anos (Adolescência)<br>`;
+            }
+            else if(i <= 50) {
+                span_msg.innerHTML += `${i} anos (Adulto)<br>`;
+            }
+            else if(i <= 100) {
+                span_msg.innerHTML += `${i} anos (Melhor idade)<br>`;
+            }
+            else {
+                span_msg.innerHTML += `${i} anos (Matusalém)<br>`;
+            }        
+    }
+}
+</script>

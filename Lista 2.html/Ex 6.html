@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe <b>quantas horas</b> você dorme por noite:
+    <input id="horas" type="text" placeholder="horas dormidas"><br><br>
+    <button onclick="calcular()">Calcular</button><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var horasdormidas = (Number(horas.value));
+
+        div_msg.innerHTML = `A quantidade de horas dormidas é: 
+        ${horasdormidas}`;
+
+        if (horasdormidas < 4){
+            alert('#zumbi');
+        }
+        if (horasdormidas > 4 &&x< 7){
+            alert('#pouca concetração');
+        }
+        if (horasdormidas > 7 &&x< 9){
+            alert('#boa concentração');
+        }
+        if (horasdormidas > 9){
+            alert('#olha a preguiça');
+        }
+    }
+</script>

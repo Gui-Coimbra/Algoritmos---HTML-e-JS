@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <h3>Calcule o preço da gasolina</h3>
+        <div id="parte1">
+            <p>Digite o preço do litro da gasolina: R$<input type="text" id="precoInp"></p>
+            <p><button onclick="registrarPreco()">Registrar o preço</button></p>
+        </div>
+
+        <div id='parte2' style="display: none">
+            <p>Digite quantos litros você quer abastecer: <input type="text" id='qtdAbastecida'>L</p>
+            <p><button onclick="registrarQuantidade()">Registrar a quantidade</button></p>
+        </div>
+    
+        <div id='parte3' style="display: none">
+            <p><button onclick="mostrar()">Mostrar quantos reais você gastará</button></p>
+            <p><button onclick="tentarMostarValorGasolina()">Tentar mostrar a variável local</button></p>
+        </div>
+</body>
+</html>
+
+<script>
+    var precoGasolina = 0;  // Essa variável deve ser global pois usaremos ela em mais de uma função
+                            // Iniciamos o ela zerada pois o usuário ainda não atribuiu o seu preço
+
+    var qtdGasolina = 0;
+
+    function registrarPreco(){
+        precoGasolina = Number(precoInp.value);
+        //Está atribuindo a variável global precoGasolina o seu novo valor;
+
+        parte2.style.display = 'block'; 
+        //Está mostrando a próxima parte do programa
+    }
+
+    function registrarQuantidade(){
+        qtdGasolina = Number(qtdAbastecida.value);
+        parte3.style.display = 'block';
+    }
+
+    function mostrar(){
+        var valorGasolina = precoGasolina * qtdGasolina; 
+        // A variável valorGasolina foi criada dentro da função, logo será impossível usá-la fora
+
+        alert(`Atenção, você gastará R$ ${valorGasolina}`);
+    }
+
+    function tentarMostarValorGasolina(){
+        alert(`${valorGasolina}`);
+    }
+</script>

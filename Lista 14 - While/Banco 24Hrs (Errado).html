@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 2</title>
+</head>
+<body>
+    <H1>Banco 24Hrs</H1>
+    <h3>Notas disponíveis: R$10, R$50 e R$100</h3>
+
+    Informe o valor que deseja sacar:
+    <input id="ipt_valor" type="number"><br><br>
+
+    <button onclick="saque()">Solicitar saque</button>
+</body>
+</html>
+<script>
+    var ax_saque_glo = 1000; 
+
+    function saque() {
+        var ax_saque = ipt_valor.value;
+        ax_saque_glo = ax_saque_glo - ax_saque;
+
+        if (ax_saque <= 0) {
+            alert('Não é possível sacar 0 ou menos, dãaa');
+
+        } else if (ax_saque % 10 != 0) {
+            alert('Valor não possível devido às notas disponíveis');
+
+        } else if (ax_saque > ax_saque_glo) {
+            alert('Valor solicitado maior que o disponível na máquina');
+
+        } else {
+            alert('Retire o dinheiro no local indicado');
+        } 
+    }
+</script>

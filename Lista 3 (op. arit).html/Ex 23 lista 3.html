@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 23 lista 3</title>
+</head>
+<body>
+    <button onclick="renato()"><img src="https://th.bing.com/th/id/OIP.HZiIDT3yKqj9SRrYGvrHywHaKi?w=124&h=180&c=7&r=0&o=5&pid=1.7"></button>
+    Votos:<b id="a_vezes">0</b> <br><br>
+
+    <button onclick="cazuza()"><img src="https://th.bing.com/th/id/OIP.XuQGHaVTBO7WBtHqFcNrFQHaFt?w=224&h=180&c=7&r=0&o=5&pid=1.7"></button> 
+    Votos:<b id="b_vezes">0</b> <br><br>
+
+    Total de votos:<b id="c_vezes">0</b>
+</body>
+</html>
+<script>
+    var ax_renato = 0;
+    var ax_cazuza = 0;
+    var ax_total_votos = 0;
+
+    function renato() {
+        ax_renato++;
+        ax_total_votos = ax_total_votos + 1;
+        a_vezes.innerHTML = `${ax_renato}`;
+        c_vezes.innerHTML = `${ax_total_votos}`
+    }
+
+    function cazuza() {
+        ax_cazuza++;
+        ax_total_votos = ax_total_votos + 1;
+        b_vezes.innerHTML = `${ax_cazuza}`;
+        c_vezes.innerHTML = `${ax_total_votos}`
+    }
+</script>

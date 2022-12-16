@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 21 - While</title>
+</head>
+<body>
+    <h1>Da leste à SPTech</h1>
+
+    Informe quantos ônibus precisa pegar:
+    <input id="onibus" type="number" autofocus placeholder="Qtd onibus"><br>
+
+    Informe quantos trens precisa pegar:
+    <input id="trem" type="number" autofocus placeholder="Qtd trens"><br>
+
+    Informe quantos metrôs precisa pegar:
+    <input id="metro" type="number" autofocus placeholder="Qtd metrôs"><br><br>
+
+    <button onclick="partiu()">"#Partiu Trajeto</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function partiu() {
+        var i = 1;
+        span_msg.innerHTML = ``;
+
+        while (i <= Number(onibus.value)) {
+            if (i == 1) {
+                span_msg.innerHTML += `<span style="color: red">Pegando o ${i}º buzão</span><br>`;
+
+            } else if (i == 2) {
+            span_msg.innerHTML += `<span style="color: red">Pegando o ${i}º buzão (Começando a cansar)</span><br>`;
+            }
+            
+            else {
+                span_msg.innerHTML += `<span style="color: red">Pegando o ${i}º buzão (Já cansei)</span><br>`;
+            }
+            i++;
+        }
+
+        var i = 1;
+
+        while (i <= Number(trem.value)) {
+            if (i == 1) {
+                span_msg.innerHTML += `<span style="color: green">Pegando o ${i}º trem</span><br>`;
+
+            } else if (i == 2) {
+            span_msg.innerHTML += `<span style="color: green">Pegando o ${i}º trem (Começando a cansar)</span><br>`;
+            }
+            
+            else {
+                span_msg.innerHTML += `<span style="color: green">Pegando o ${i}º trem (Já cansei)</span><br>`;
+            }
+            i++;
+        }
+
+        var i = 1;
+
+        while (i <= Number(metro.value)) {
+            if (i == 1) {
+                span_msg.innerHTML += `<span style="color: blue">Pegando o ${i}º metrô</span><br>`;
+
+            } else if (i == 2) {
+            span_msg.innerHTML += `<span style="color: blue">Pegando o ${i}º metrô (Começando a cansar)</span><br>`;
+            }
+            
+            else {
+                span_msg.innerHTML += `<span style="color: blue">Pegando o ${i}º metrô (Já cansei)</span><br>`;
+            }
+            i++;
+        }
+    }
+</script>

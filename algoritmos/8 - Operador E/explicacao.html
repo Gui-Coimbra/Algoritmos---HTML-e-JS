@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador E</title>
+</head>
+<body>
+    <h2>Operador E (&&)</h2>
+
+    <h3>Escolha um curso</h3>
+    <select id="cursoSlct" onchange="PegarCurso()">
+        <option value="0">Selecione o curso</option>
+        <option value="1">Ciência da Computação</option>
+        <option value="2">Sistemas de Informação</option>
+        <option value="3">Análise e Desenvolvimento de Sistemas</option>
+    </select>
+
+    <br><br>
+
+    <h3>Escolha um período</h3>
+    <select id="periodoSlct" onchange="PegarPeriodo()">
+        <option value="0">Selecione o período</option>
+        <option value="1">Manhã</option>
+        <option value="2">Noite</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="descobrir()">Descobrir o Preço</button>
+</body>
+</html>
+
+<script>
+    var curso = '';
+    var mensalidadeCurso = 0;
+
+    var periodo = '';
+
+    function PegarCurso(){
+        if(Number(cursoSlct.value) == 0){
+            alert('Curso inválido');
+        }else if(Number(cursoSlct.value) == 1){
+            curso = 'Ciência da Computação';
+        }else if(Number(cursoSlct.value) == 2){
+            curso = 'Sistemas de Informação';
+        }else if(Number(cursoSlct.value) == 3){
+            curso = 'Análise e Desenvolvimento de Sistemas';
+        }
+    }
+
+    function PegarPeriodo(){
+        if(Number(periodoSlct.value) == 0){
+            alert('Período inválido');
+        }else if(Number(periodoSlct.value) == 1){
+            periodo = 'Manhã';
+        }else if(Number(periodoSlct.value) == 2){
+            periodo = 'Noite';
+        }
+    }
+
+    function descobrir(){
+        // Ele irá comparar dentro do if se as duas comparações retornam verdadeiros.
+        // Em hipótesese nenhuma curso pode ser verdadeiro e periodo pode ser falso e vice-versa.
+        // Ambos têm que ser verdadeiros
+        // Caso nenhuma das condições retorne dois verdadeiros, o código continua sua execução ignorando os if's.
+
+        if(curso == 'Ciência da Computação' && periodo == 'Manhã'){
+            mensalidadeCurso = 1500
+        }else if(curso == 'Ciência da Computação' && periodo == 'Noite'){
+            mensalidadeCurso = 1300;
+        }else if(curso == 'Sistemas de Informação' && periodo == 'Manhã'){
+            mensalidadeCurso = 1250
+        }else if(curso == 'Sistemas de Informação' && periodo == 'Noite'){
+            mensalidadeCurso = 1000;
+        }else if(curso == 'Análise e Desenvolvimento de Sistemas' && periodo == 'Manhã'){
+            mensalidadeCurso = 900
+        }else if (curso == 'Análise e Desenvolvimento de Sistemas' && periodo == 'Noite'){
+            mensalidadeCurso = 850;
+        }
+
+        alert(`Valor da Mensalidade: ${mensalidadeCurso},00`)
+    }
+</script>

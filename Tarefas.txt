@@ -1,0 +1,5 @@
+Turfe;
+Terminar ex 17 vetores;
+Math.randon;
+correção da ax3 e 
+do sorit;

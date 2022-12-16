@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1 lista 10</title>
+</head>
+<body>
+    Informe a fruta que chegou na mesa:
+    <input id="fruta" type="text" placeholder="Fruta">
+    <button onclick="comer()">Vai comer?</button>
+</body>
+</html>
+<script>
+    function comer() {
+
+        var ax_fruta = fruta.value;
+
+        if (ax_fruta == 'banana' || ax_fruta == 'laranja' || ax_fruta == 'Banana' || ax_fruta == 'Laranja') {
+
+        alert(`Sim, vai comer ${ax_fruta}`)}
+     else {
+        alert(`A fruta ${ax_fruta} ela não come`);
+    }
+}
+</script>

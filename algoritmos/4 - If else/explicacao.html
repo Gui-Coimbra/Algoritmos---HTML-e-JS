@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else</title>
+</head>
+
+<body>
+    <h2>Pontos na CNH</h2>
+
+    <input type="text" id="qtdPontos" placeholder="Digite a quantidade de pontos"/>
+    <button onclick="validar()">Validar</button>
+</body>
+
+</html>
+
+<script>
+    function validar() {
+        // Else significa 'Senão'
+        // O comando else sempre é executado quando o if não é suprido
+        //
+        // Sua estrutura é:
+        // if (comparação) {
+        //     comando(s);
+        // }else{
+        //      comando(s);
+        // };
+        //
+        // Sempre ou o if ou o else será executado, pois se o if não suprir a condição ele cairá no else
+        // Ambos comandos nunca são executados juntos pois é lógicamente impossível
+
+
+        qtdPontos = Number(qtdPontos.value)
+        if (qtdPontos > 20) {
+            alert ('Você está com a CNH suspensa');
+        }else{
+            alert ('Tudo OK com a sua CNH');
+        }
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 15 - For</title>
+</head>
+<body>
+    Informe quantos depósitos você fez e o valor:<br>
+    <input id="deposito" type="number" autofocus placeholder="Quantos depósitos">
+    <input id="valor" type="number" placeholder="valor"><br><br>
+
+    <button onclick="grana()">Acompanhar grana</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function grana() {
+        var dep = Number(deposito.value);
+        var val = Number(valor.value);
+        var index = 0;
+        var valTot = val*dep;
+
+        span_msg.innerHTML = ``;
+
+        for (index = 1; index <= dep; index++) {
+            if (index % 3 == 0) {
+                span_msg.innerHTML += `${index}° Mês: R$ ${(val*index + val*0.01).toFixed(2)} reais<br>`;
+            }
+            span_msg.innerHTML += `${index}° Mês: R$ ${(val*index).toFixed(2)} reais<br>`;
+        } 
+        span_msg.innerHTML += `Total guardado: R$ ${(valTot).toFixed(2)} reais<br>`;           
+    }
+</script>

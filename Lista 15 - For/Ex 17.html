@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 17 - For</title>
+</head>
+<body>
+    Informe a quantidade de títulos mundiais da FIFA que seu clube tem:
+    <input id="mundial" type="number" autofocus><br><br>
+
+    <button onclick="ver()">Ver troféus de mundiais FIFA</button><br>
+
+    <div id="taça"></div>
+</body>
+</html>
+<script>
+    function ver() {   
+        taça.innerHTML = ``;
+
+        for (var i = 0; i <= Number(mundial.value); i++) {
+            if (i <= 0) {
+                taça.innerHTML += `<img style="height: 150px;" src="https://th.bing.com/th/id/R.41db0448827b2fe270df2d72443a2d9e?rik=tW7jAoa1dNwRUw&riu=http%3a%2f%2f1.bp.blogspot.com%2f_nN4mIO7crlM%2fTFAZxdZlHcI%2fAAAAAAAAAaU%2fPxNqd3e4xb0%2fs320%2fTORCEDOR%2bCHORANDO.jpg&ehk=RV1aoq%2ffs5OPkKq%2bFUuXgYM4OGTMcEwYWjQ1%2b6VHsl4%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1">`;
+            }
+            else {
+                taça.innerHTML += '<br><img style="height: 150px;" src="https://th.bing.com/th/id/OIP.Ducv6h-V4LUrG_Yi2zEfGAHaKp?pid=ImgDet&rs=1">';
+            }
+        } 
+    }
+</script>

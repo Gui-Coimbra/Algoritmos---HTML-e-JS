@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 4 lista 10</title>
+</head>
+<body>
+    <h1>Descubra se pode parcelar sua compra</h1>
+
+    <select id="tipo">
+        <option value="1">Dinheiro</option>
+        <option value="2">Débito</option>
+        <option value="3">Crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+
+    <button onclick="calcular()">Analisar compra</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        if (tipo.value == 1 || tipo.value == 2){
+        div_msg.innerHTML = 'Você terá que pagar a vista';}
+
+    else if (tipo.value == 3 || tipo.value == 4) {
+        div_msg.innerHTML = 'Pagamento poderá ser parcelado';}
+}
+</script>

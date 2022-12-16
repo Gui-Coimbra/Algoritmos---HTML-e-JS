@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12 - For</title>
+</head>
+<body>
+    Informe quantas latas de Coca-Colas você acredita ter tomado na vida:
+    <input id="cocacola" type="number" placeholder="Hmm cokinha"><br><br>
+
+    <button onclick="coca()">Ver a quantidade</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function coca() {
+        span_msg.innerHTML = ``;
+        var index = 0;
+        var coca = Number(cocacola.value);
+        
+        for (index = 1; index <= coca; index++) {
+            span_msg.innerHTML += `${index} lata(s)<br>`;
+        }
+    }
+</script>

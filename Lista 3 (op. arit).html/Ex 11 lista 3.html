@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 lista 3 - Operações Aritméticas</title>
+</head>
+<body>
+    Insira seu peso:
+    <input id="peso" type="number" placeholder="peso"><br><br>
+
+    Insira sua altura:
+    <input id="altura" type="number" placeholder="altura"><br><br>
+
+    <button onclick="homem()">IMC Homem</button>
+    <button onclick="mulher()">IMC Mulher</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function homem() {
+        var altura_imc = (altura.value * altura.value); 
+        var imc_homem = (peso.value / altura_imc);
+        div_msg.innerHTML = `Seu IMC é ${imc_homem}`
+    }
+
+    function mulher() {
+        var altura_imc = (altura.value * altura.value);
+        var imc_homem = (peso.value / altura_imc); 
+        var imc_mulher = imc_homem - 0.10;
+        div_msg.innerHTML = `Seu IMC é ${imc_mulher}`
+    }
+</script>

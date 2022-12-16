@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globais e Locais</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <h2>Select</h2>
+    <p>Escolha uma marca de carro</p>
+
+    <select id="marcaSelect"> <!-- O select é a caixa que quando aberta aparece as opções disponíveis -->
+      <option value="Volvo">Volvo</option> <!-- O value da option escolhida será atribuída como value do select -->
+      <option value="Saab">Saab</option> <!-- Logo se o usuário escolher a Saab, o valor do select marca será Saab -->
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
+    </select>
+
+    <button onclick="registrarMarca()">Registrar a marca</button>
+
+    <p>
+        <select id="corSelect" onchange="registrarCor()"> <!-- onchange é igual ao onclick, ele executa uma função quando o usuário troca a opção -->
+            <option value="vermelho">Vermelho</option>
+            <option value="azul">Azul</option>
+            <option value="preto">Preto</option>
+            <option value="branco">Branco</option>
+        </select>
+    </p>
+
+    <button onclick="ver()">Ver meu carro</button>
+</body>
+</html>
+
+<script>
+    marca = '';
+    cor = '';
+
+    function registrarMarca(){
+        marca = marcaSelect.value;
+    }
+
+    function registrarCor(){
+        cor = corSelect.value;
+    }
+
+
+    function ver(){
+        alert(`Seu carro será um ${marca} da cor ${cor}`);
+    }
+</script>

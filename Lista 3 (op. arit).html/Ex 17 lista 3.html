@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17 lista 3 - Operações Aritméticas</title>
+</head>
+
+<body>
+    <h1>Economias de Huguinho, Zezinho e Luizinho</h1>
+
+    Informe a quantidade de moedas depositadas por Huguinho:
+    <input id="hugo" type="number" placeholder="Huguinho"><br><br>
+
+    Informe a quantidade de moedas depositadas por Zezinho:
+    <input id="ze" type="number" placeholder="Zezinho"><br><br>
+
+    Informe a quantidade de moedas depositadas Luizinho:
+    <input id="luiz" type="number" placeholder="Luizinho"><br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        var ax_hugo = hugo.value * 0.50;
+
+        var ax_ze = ze.value * 0.50;
+
+        var ax_luiz = luiz.value * 0.50;
+
+        div_msg.innerHTML = `O <b style="color: red;"> Huguinho </b> economizou <b> 
+                                RS ${ax_hugo.toFixed(2)} </b> pois fez <b><u>${hugo.value}</u></b> depósitos<br>
+
+                            O <b style="color: blue;"> Zezinho </b> economizou <b> 
+                                RS ${ax_ze.toFixed(2)} </b> pois fez <b><u>${ze.value}</u></b> depósitos <br>
+                                
+                            O <b style="color: green;"> Luizinho </b> economizou <b> 
+                                RS ${ax_luiz.toFixed(2)} </b> pois fez <b><u>${luiz.value}</u></b> depósitos`
+    }
+</script>

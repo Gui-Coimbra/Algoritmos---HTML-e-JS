@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 17 - While</title>
+</head>
+<body>
+    <h1>Atazanando a medium</h1>
+
+    Informe a quantidade elefantes:
+    <input id="elefantes" type="number" autofocus><br><br>
+
+    <button onclick="atazanar()">Atazanar a médium</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function atazanar() {
+        i = 1;
+        var nome = String('elefante');
+
+        span_msg.innerHTML = ``;
+
+        while (i <= Number(elefantes.value)) {
+            if (i == 1) {
+                span_msg.innerHTML += `1 elefante incomoda muita gente!<br>`;
+
+            } else {
+            span_msg.innerHTML += `${i} elefante ${i*nome} muito mais!<br>`;
+            }
+
+            i++;
+            }
+        }
+</script>

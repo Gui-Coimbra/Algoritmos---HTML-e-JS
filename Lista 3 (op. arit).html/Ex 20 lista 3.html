@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 20 lista 3</title>
+</head>
+<body>
+    Informe o seu salário:
+    <input id="salario" type="number" placeholder="salario"><br><br>
+
+    <button onclick="calcular()">Confirmar salário</button><br><br>
+
+    <button onclick="conta100()">Pagar conta de 100</button><br><br>
+
+    <button onclick="conta500()">Pagar conta de 500</button><br><br>
+
+    <button onclick="loteria()">Ganhar 2000 na loteria</button><br><br>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var ax_salario = salario.value;
+        div_msg.innerHTML = `Grana atual: R$ ${ax_salario}`;
+    }
+
+    function conta100() {
+        var ax_salario2 = salario.value;
+        div_msg.innerHTML = `Grana atual: R$ ${ax_salario2 - 100}`
+    }
+
+    function conta500() {
+        var ax_salario3 = salario.value - 100;
+        div_msg.innerHTML = `Grana atual: R$ ${ax_salario3 - 500}`
+    }
+
+    function loteria() {
+        var ax_salario4 = salario.value - 600;
+        div_msg.innerHTML = `Grana atual: R$ ${ax_salario4 + 2000}`
+    }
+</script>

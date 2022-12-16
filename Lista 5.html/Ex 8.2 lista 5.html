@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8.2 lista 3</title>
+</head>
+<body>
+    <h1>Como está meu atendimento?</h1>
+
+    <select id="avaliacao">
+        <option value="1">1 estrela</option>
+        <option value="2">2 estrelas</option>
+        <option value="3">3 estrelas</option>
+        <option value="4">4 estrelas</option>
+        <option value="5">5 estrelas</option>
+    </select><br>
+
+    Média atual:<b id="media"> 0 estrelas</b><br>
+	Número de avaliações:<b id="total">0</b><br><br>
+
+    <button onclick="confirmar()">Confirmar avaliação</button>
+</body>
+</html>
+<script>
+    var ax_total_avaliacao = 0;
+
+    function confirmar() {
+        var ax_avaliacao = avaliacao.value;
+        ax_total_avaliacao = ax_total_avaliacao + 1;
+        media.innerHTML = `${ax_avaliacao / 2}`;
+        total.innerHTML = `${ax_total_avaliacao}`;
+    }
+</script>

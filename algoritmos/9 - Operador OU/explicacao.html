@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador OU</title>
+</head>
+<body>
+    <h2>Operador OU (||)</h2>
+
+    <h3>Escolha o método de vestibular</h3>
+    <select id="vestibularSlct" onchange="pegarVestiublar()">
+        <option value="0">Selecione o método</option>
+        <option value="1">Vestibular SPTech</option>
+        <option value="2">ENEM</option>
+    </select>
+
+    <br><br>
+
+    <p>Digite a sua nota: <input id="notaInp" type="text"></p>
+
+    <p><button onclick="avaliar()">Próxima Fase</button></p>
+</body>
+</html>
+
+<script>
+    var vestibular = 0;
+    var nota = 0;
+
+    function pegarVestiublar(){
+        if(Number(vestibularSlct.value) == 0){
+            alert('Opção inválida');
+        }else if(Number(vestibularSlct.value) == 1){
+            vestibular = 1;
+        }else if(Number(vestibularSlct.value) == 2){
+            vestibular = 2;
+        }
+    }
+
+    function avaliar(){
+        nota = Number(notaInp.value);
+
+        // O operador '|| -> ou' necessita apenas de uma condição verdadeira para ser executado.
+        if((vestibular == 1 && nota >= 14) || (vestibular == 2 && nota >= 450)){
+            alert('Parabéns, você passou para a 2a fase!!!');
+        }else{
+            alert('Tente novamente no próximo semestre... :(');
+        }
+    }
+</script>

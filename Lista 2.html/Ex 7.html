@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe o seu <b>salário estágio:</b>
+    <input id="pri_num" type="text" placeholder="Salário"><br>
+
+    Informe o valor <b>da mensalidade de sua faculdade:</b>
+    <input id="seg_num" type="text" placeholder="Mensalidade">
+    <br><br>
+
+    <button onclick="calcular()">calcular</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var money = (Number(pri_num.value)-Number(seg_num.value))/30;
+        div_msg.innerHTML = `Sua média é:
+        ${money}`;
+
+        if (money < 15) {
+            alert('#ControleTotal');
+        } else {
+            if (money <= 20) {
+                alert('#ragazzonosabado');
+            } else {
+                if (money <= 25) {
+                    alert('#cinemanamorada');
+                } else {
+                    if (money <= 30) {
+                        alert('#novogame');
+                    } else {
+                        if (money > 30) {
+                            alert('#tobonito');
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 6 - while</title>
+</head>
+<body>
+    Informe o nome da pessoa que você mais ama na vida:
+    <input id="pessoa"><br><br>
+
+    O quanto você ama essa pessoa?
+    <input id="qtd" type="range" min="0" max="10"><br><br>
+
+    <button onclick="expressar()">Expressar amor</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function expressar() {
+        var index = 1;
+
+        while (index <= Number(qtd.value)) {
+            span_msg.innerHTML += `${index} - ${pessoa.value}, eu te amo! Sempre lembre disso!<br>`;
+            index++;
+        }
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 5 - While</title>
+</head>
+<body>
+    <button onclick="cabalisticos()">Números cabalísticos</button><br><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function cabalisticos() {
+        var index = 1;
+
+        while (index <= 15) {
+            if (index != 3 && index != 4 && index != 7 && index != 10 && index != 12) {
+            span_msg.innerHTML += `${index}<br>`;
+        }
+            index++;
+        }
+    }
+</script>

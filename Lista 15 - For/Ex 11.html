@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11- For</title>
+</head>
+<body>
+    Informe o limite inferior, o limite superior da amostragem<br>
+    e um número para testar a divisibilidade:<br>
+    <input id="inferior" type="number" placeholder="Inferior">
+    <input id="superior" type="number" placeholder="Superior">
+    <input id="divisibilidade" type="number" placeholder="Divisibilidade"><br><br>
+
+    <button onclick="contar()">Contar</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function contar() {
+        span_msg.innerHTML = ``;
+        var inf = Number(inferior.value);
+        var sup = Number(superior.value);
+        var div = Number(divisibilidade.value);
+        var index = 0;
+
+        if (inf <= 1 || sup >= 100 || (div < 3 && div > 10)) {
+            span_msg.innerHTML = `Erro: os limites devem estar entre 1 e 100 e o divisor entre 3 e 10!`;
+    }   
+        for (index = inf; index <= sup; index++) {
+            if (index%div == 0) { 
+            span_msg.innerHTML += `${index}<br>`;
+            }
+        }
+}
+</script>

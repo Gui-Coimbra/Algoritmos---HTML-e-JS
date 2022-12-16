@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 5 - for</title>
+</head>
+<body>
+    <button onclick="contar()">Conte de 99 a 1</button><br>
+
+    <span id="span_msg"></span>
+</body>
+</html>
+<script>
+    function contar() {
+        for (index = 99; index >= 1; index--) {
+            span_msg.innerHTML += `${index}<br> `;
+        }
+    }
+</script>
